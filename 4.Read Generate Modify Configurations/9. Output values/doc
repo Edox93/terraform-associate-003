@@ -1,0 +1,5 @@
+Output values make information about infrustructure available on the command line, and can expose information for other Terraform configurations ti use
+
+Output values defined in Project A can be referenced from code in Project B as well.
+
+IN tf.state file U can find output key and in thaht find attributes

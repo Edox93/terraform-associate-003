@@ -1,0 +1,3 @@
+It can happen that in a single terraform file , your are defining 2 diff resources
+
+resource 2 can be depend one some value of resource 1

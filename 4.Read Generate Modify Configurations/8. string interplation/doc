@@ -1,0 +1,2 @@
+String interplatin in terraform
+${} this syntax the terraform will replace a expression with calculated value
