@@ -19,7 +19,10 @@ resource "github_repository" "example2" {
 
 provider "aws" {
     region = "us-east-1"
+    shared_credentials_files = ["../../aws.key"]
+    profile = "customprofile"
 }
+
 /*
 resource "aws_instance" "ec2-terraform-as3-1" {
   ami           = "ami-0bdd88bd06d16ba03"
