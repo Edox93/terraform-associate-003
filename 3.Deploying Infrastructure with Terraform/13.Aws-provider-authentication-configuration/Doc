@@ -1,0 +1,7 @@
+hardcoding access and secret key in file is not optimal for security point.
+
+By Default If you not define secrets the terraform will search it in
+"$HOME/.aws/config" and "$HOME/.aws/credentials" on Linux and MacOS
+"%USERPROFILE%\.aws\config" and "%USERPROFILE%\.aws\credentials" for Windows
+
+If you setup aws cli to work with aws the credentials and configs aws cli will use from same paths like terraform

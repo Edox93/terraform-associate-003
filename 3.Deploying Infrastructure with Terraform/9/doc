@@ -1,0 +1,3 @@
+Not always can match current and desired states
+
+If u manula change size of instance and after run terraform appy, the terraform will change to desired state

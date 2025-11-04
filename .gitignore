@@ -1,6 +1,9 @@
 # Local .terraform directories
 .terraform/
 
+aws.key
+github.token
+
 # .tfstate files
 *.tfstate
 *.tfstate.*

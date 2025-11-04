@@ -1,0 +1,13 @@
+About Terraform provider plugins versions
+
+Just because a better approach is recommended, does NOT always mean that the older approach will stop working
+
+It means the old version plugin continue to working
+
+Organizations can continue to use the approach that suits best in it's environment
+
+For larger enterprises, it becomes difficult to upgrade their code base to the newer approach that provider recommends
+
+In such case, they stick the appropriate provider version that supports the older approach of creating the resource
+
+In new versions you will se some changes in the way you create a resource

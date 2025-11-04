@@ -1,0 +1,18 @@
+terraform refresh
+
+The terraform refresh command was used to update the Terraform state file 
+to reflect the actual state of resources in the infrastructure. 
+
+If u change manual something in current state u can run terraform refresh  to update desired state file, and after that terraform plan will show no changes
+
+If you create a ec2, after change something in resource (example ami or region), after run terraform plan, terraform will show noew change to run in , but in this case if you run terraform refresh, the terraform will not find it in current state and clean up your current tf.state file
+Be Careful
+BUt we have tf.state.backup for some cases
+
+terraform refresh is depricated in new version of terraform
+
+The -refresh-only option for terraform plan and terraform apply was  introduced in Terraform v0.15.4
+
+The terraform refresh command, while previously a standalone command, is now effectively replaced by the -refresh-only flag used with terraform apply or terraform plan.
+Purpose:
+The primary purpose of terraform refresh (or its modern equivalent) is to synchronize the Terraform state file with the current, real-world state of your infrastructure. This is crucial when manual changes have been made to resources outside of Terraform's management, leading to "configuration drift."

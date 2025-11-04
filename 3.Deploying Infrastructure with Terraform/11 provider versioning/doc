@@ -1,0 +1,36 @@
+~> 2.0              any version in 2.x range
+>=                  greater than equal to the version
+<=                  less than equal to the version
+>= 2.10,<= 2.30     any version between 2.10 - 2.30
+
+
+#Terraform 0.13+
+#
+#terraform {
+#  required_providers {
+#    aws = {
+#      source = "hashicorp/aws"
+#      version = "6.19.0"
+#    }
+#  }
+#}
+
+if you define specific version
+or range and after change this version upper or less 
+the .terraform.lock.hcl will lock (constraints) your first version
+U can delete that file and run init to download changed version 
+Or u can call terraform init -upgrade to update lock file version
+
+example in .terraform.lock.hcl:
+provider "registry.terraform.io/hashicorp/aws" {
+  version     = "6.19.0"
+  constraints = "~> 6.0"
+} 
+
+
+
+Error:
+ Error: Failed to query available provider packages
+
+Could not retrieve the list of available versions for provider hashicorp/aws: locked provider registry.terraform.io/hashicorp/aws 6.19.0 does    
+not match configured version constraint 5.0.0; must use terraform init -upgrade to allow selection of new versions

@@ -1,0 +1,14 @@
+Resource type can be same but loal name must be unique
+
+3 type of providers:
+Official
+Partner
+Commuity
+
+For destroying specific resource should specify resoure type and local name of resource  with flag --target
+--target aws_instance.ec2-terraform-as3-1
+
+Terraform primary function is to create modify and destroy to match desired state
+
+terraform init -upgrade to upgrade  the version in .terraform.lock.hcl file to wich u choose later
+terraform apply -auto-approve  applying without contiune question

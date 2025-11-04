@@ -1,0 +1,10 @@
+basic aws services to understand terraform concepts
+
+Virtual Machine (EC2) 
+Firewall (Security groups)
+AWS Users (IAM Users)
+IP Address (Elastic IP)
+
+1. Basic of irewalls in AWS
+2. Firewall Practicial in AWS (GUI Console)
+3. Creating Firewall Rules Through Terraform

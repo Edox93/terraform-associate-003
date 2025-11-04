@@ -1,0 +1,3 @@
+tfstate file stores current state of your terraform  
+create backup or store cautionnly
+n tfstate file u can find additional infou abbout resources, or example aws instance IP

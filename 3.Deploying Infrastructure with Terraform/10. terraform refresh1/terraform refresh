@@ -1,0 +1,6 @@
+terraform refresh
+
+The terraform refresh command was used to update the Terraform state file 
+to reflect the actual state of resources in the infrastructure. 
+
+If u change manual something in current state u can run terraform refresh  to update desired state file, and after that terraform plan will show no changes
