@@ -1,0 +1,20 @@
+Repeated static values is more work in the future
+better solution would be define Repeated values in one central place
+Terraform input variables are used to pass certain values from outside of the configuration
+
+Example
+
+Name       value
+
+vpn_ip     101.0.62.210/32
+app_port   8080
+
+resource "aws_vpc_security_group_ingress_rule" "allow_tls_ipv4" {
+    security_group_id = ""
+    cidr_ipv4 = var.vpn_ip
+    from_port = var.app_port
+    ip_protocol "tcp"
+    to_port = var.app_port
+}
+
+No need to touch the core Terraform configuration file. This can avoid huma mistakes while editing.

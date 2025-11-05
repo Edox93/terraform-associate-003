@@ -1,0 +1,19 @@
+HashiCorp recommends creating a separate file with name of *.tfvars to define all variable value in a project
+
+if file name is terraform.tfvars -> Terraform will automatically load values from it
+
+Recomended structure
+
+1. Main Config file
+2. variables.tf that defines all the variables
+3. terraform.tfvars file that defines value to all the variables
+
+U can run with env file
+
+terraform plan -var-file="prd.tfvars"
+
+or with default value
+terraform plan
+
+or without value and enter value interactive in terminal if default does not exists
+#terraform plan 
