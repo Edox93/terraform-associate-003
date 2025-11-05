@@ -1,0 +1,12 @@
+Declaring Variable Values
+
+variable ways to set
+
+1. Default variable
+2. from tfvars
+3. environment variable  "TF_VAR_"
+4. command line  
+
+Example:
+
+echo %TF_VAR_instance_type%
