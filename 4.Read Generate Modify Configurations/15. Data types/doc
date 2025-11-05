@@ -1,0 +1,17 @@
+Data types refer to the type of value
+
+Depending on the requierement, u can use wide variety of values in Terraform configuration
+
+"Hello World"   string
+56565           number
+                    bool
+                    list
+                    set
+                    map
+                    null
+
+
+We can restrict the value of variable to a data type
+Example: Only numbes should be allow in AWS username
+
+for example  secuirty grou in aws is only list, in bran
