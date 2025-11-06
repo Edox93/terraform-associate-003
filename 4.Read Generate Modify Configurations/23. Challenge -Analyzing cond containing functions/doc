@@ -1,0 +1,4 @@
+Analyze what exactly the give code in Github will do without running the "apply"
+Analyze the outcome by applying function usin Terraform Console and reading the documentation
+Make a note of it
+Run the "terraform apply" and verify if it matches your findings

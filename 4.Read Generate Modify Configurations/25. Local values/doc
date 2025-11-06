@@ -1,0 +1,15 @@
+Local Values are similar to variables in a sense that it allows you to store data centraly and that can be referenced in ,ultiple parts of configuration
+
+Additional 
+U can add expressions to locals, which allows you to compute values dynamically
+
+locals {
+    # Ids for multiple set of EC2 , merged together
+  instance_ids = concat(aws_instance.blue.*.id, aws_instance.green.*.id)
+}
+
+In variable functions not allowed
+
+Variable value can be defined in wide variety of places like terraform.tfvars, ENV Variables, CLI and so on
+
+Locals are more of a private resource. You have to directly modify the code.

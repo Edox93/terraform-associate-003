@@ -1,0 +1,14 @@
+List data type allow to store collection of values for a single Variable / Argument
+
+example ["a", 15, true]
+
+variable = "my-list" {
+    type = list
+    default = ["a", 15, true]
+}
+
+# Or specify type of values
+variable = "my-list" {
+    type = list(numler)
+    default = [12, 15, 3]
+}

@@ -1,0 +1,53 @@
+Data sources allow to Terraform to use / fetch info defined outside of Terraform
+
+provider "aws" {
+    region = "us-east-1"
+}
+
+data "aws_instance" "example" {
+ filter {
+    name   = "tag:Team"
+    values = ["Production"]
+  }
+}
+
+
+
+Example 1
+red info from Digital Ocean Account
+
+terraform {
+  required_providers {
+    digitalocean = {
+      source  = "digitalocean/digitalocean"
+    }
+  }
+}
+
+provider "digitalocean" {
+  token = "your-token-here"
+}
+
+data "digitalocean_account" "example" {}
+
+
+
+
+Example 2 local file
+
+data "local_file" "foo" {
+  filename = "${path.module}/demo.txt"
+}
+
+
+
+Example 3 aws
+
+provider "aws" {
+    region = "us-east-1"
+}
+
+data "aws_instances" "example" {}
+
+
+u can find it in tfstate

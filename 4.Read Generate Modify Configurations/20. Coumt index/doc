@@ -1,0 +1,3 @@
+When you using count, u can also use count.index wich allow better flexibility
+
+This attribute hold a district index number, starting from 0, that uniquely identifies each instance created by the count meta-argument

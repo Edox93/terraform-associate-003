@@ -1,0 +1,15 @@
+A function is a block that performs a specific task
+
+About built-in functions
+
+Nmeric
+string
+Collections
+Filesystem 
+
+and etc
+
+max()
+file()  # read content of a file and return a string
+
+example terraform console max("10","30","20")

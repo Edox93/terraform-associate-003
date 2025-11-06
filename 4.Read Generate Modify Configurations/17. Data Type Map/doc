@@ -1,0 +1,13 @@
+A map data type represent a collection fo key-value pair elements
+
+Example:
+variable "instance_tags" {
+  type = map
+  default = {
+    Name = "server"
+    Env = "Prod"
+    Team = "payments"
+  }
+}
+
+for example in AWS the tags are key-value pairs
