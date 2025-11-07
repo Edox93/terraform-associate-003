@@ -1,0 +1,28 @@
+Debugging is the process of finding the root cause of a specific issue
+
+30-40% of time goest to Debugging
+
+It's helpfu with detailed logs
+
+for example ssh with verbosity
+
+Terraform has detailed logs that you can enable by setting the TF_LOG
+
+You can set TF_LOG to one of the log levels (in order of decreasing verbosity)
+
+Log Level :
+TRACE DEBUG INFO WARN ERROR
+
+To storing the logs to File
+
+TF_LOG_PATH
+
+to set env 
+in Windows
+
+in cmd    set TF_LOG=INFO
+          set TF_LOG_PATH=terraform.log
+
+in LInox/MacOs
+in shell  export TF_LOG=INFO
+          export TF_LOG_PATH=terraform.log

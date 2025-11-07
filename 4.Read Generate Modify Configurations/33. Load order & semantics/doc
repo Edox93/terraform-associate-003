@@ -1,0 +1,9 @@
+Semantics
+
+terraform generally loads all the configs files within the directory 
+specified in alphabetical order
+
+
+The files loaded must end in either .tf or .tf.json to specify the format that is in use
+
+web.tf app.tf sg.tf providers.tf  all wiil be loaded

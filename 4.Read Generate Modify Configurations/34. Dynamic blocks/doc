@@ -1,0 +1,5 @@
+Dynamic BLocks
+
+Dynamic block allows us to dynamic construct repeatable nested  blocks which is supported inside resource,data,provider, and provisioner blocks:
+
+

@@ -1,0 +1,16 @@
+There are 4 potencial types of issues that you could experience with Terraform
+
+Language
+State
+Core
+Provider Errors
+
+1. Example syntax error and you can see in output and error number
+2. state is out of sync and Terraform may destroy or change something
+of states is locked you will also be blocket for operations
+3. These error are directly to main core Terrafrom appllication
+Error produced at this level may be a bug
+4. These set of error are primarily releated to the provider plugins
+Use provider Github page for report an identify issue
+
+For Reporting bug go to the Github repo choose issue and create bug reports 
