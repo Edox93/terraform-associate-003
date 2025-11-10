@@ -1,0 +1,9 @@
+terraform graph to a visual repesentation of the dependency releationshipts between resources defined in your terraform configuration
+
+you can run errform graph
+after output insert to any online graphviz to see
+or  
+apt install graphviz
+terraform graph | dot -Tsvg > graph.svg
+
+It valuable tools to see releationships between resources

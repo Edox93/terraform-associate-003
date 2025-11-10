@@ -1,0 +1,18 @@
+terraform allows saving a plan to a file
+
+terraform plan -out  infra.plan
+
+after change something in resoure.tf if you run
+terraform apply infra.plan
+
+you will be see that was before modification resource.tf
+
+infra.plan is a binary file
+
+run terraform show to read the contents in detail
+
+terraform show infra.plan
+or
+terraform show -json infra.plan
+or for pretty view
+terraform show -json infra.plan | jq

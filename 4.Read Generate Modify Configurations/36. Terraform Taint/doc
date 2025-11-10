@@ -1,0 +1,22 @@
+# Old command "terraform taint"
+# New command "terraform apply -repace  <resource name>"
+
+
+You have created a new resource via Terraform
+Users have made a lot of manual changes (both infrastructur and inside the server)
+
+Two ways to deal with this: Import Changes to Terraform/Delete & Recrea the resource
+
+
+
+           ######### Recreating the Resource 
+The -replace option with terraform apply to force Terraform to replace an object even
+though there are no configuration changes that would require it
+
+
+For example: someone change a something in ec2 manual and you want to change to terraform file state
+
+terraform apply -replace="aws_instance.myec2"
+# terraform will destroy and recreate
+
+From Terraform v0.15.2 and late, Hashicorp recommend using the -replace  option with terraform apply    instead of terraform taint
