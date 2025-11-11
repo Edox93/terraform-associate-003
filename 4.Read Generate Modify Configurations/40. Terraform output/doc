@@ -1,0 +1,31 @@
+Terraform output command is used to extract the value of an output variable from the state file
+
+example: terraform output iam_names
+
+[
+    "iamuser.0",
+    "iamuser.1",
+    "iamuser.2",
+]
+
+If you run terraform apply again, will be no changes but you will see again output about users
+
+
+
+or
+
+terraform output iam_users
+
+Outputs:
+
+iam_arn = [
+  "arn:aws:iam::701544682907:user/system/iamuser0",
+  "arn:aws:iam::701544682907:user/system/iamuser1",
+  "arn:aws:iam::701544682907:user/system/iamuser2",
+]
+iam_users = [
+  "iamuser0",
+  "iamuser1",
+  "iamuser2",
+]
+

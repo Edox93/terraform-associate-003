@@ -1,0 +1,37 @@
+Using cloud provider does not mean you have access to ulimited resources
+There are some limits that apply to all of the services
+
+
+Less Known Limit - API Limit in AWS
+
+When you are architecting for the cloud, you need to keep API throttling in mind, particulary the types of call and the frequency with wich they are called.
+
+When the allotted rate limit for an API call is exceeded, you will recieve an error response and the call will be throttled.
+
+Key  Consideration in Terraform
+ec2.tf
+sg.tf
+iam.tf
+vpc.tf
+
+
+Time to Slow Down
+Whenever you are designing Yerraform projects, you have to take in mind the API limits of the provider to avoid throthling that will futher impact production systems.
+
+
+
+1- Convert Big Project to multiple Smaller Project
+
+vpc.tf project-1
+iam.tf project-2
+
+ec2.tf
+       project-3
+sg.tf
+
+
+You can use   -refresh=false  is used in normal planning mode to skip the default behavior of refreshing Terraform state before checking for configuration
+
+By disabling automatic refresh, you can potentially speed up the planning and application process, especially if oyu are confident thaht the existing state is
+
+terraform-plan -refresh=false

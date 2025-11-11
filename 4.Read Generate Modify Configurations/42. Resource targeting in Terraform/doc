@@ -1,0 +1,5 @@
+In typical Terraform workflow, you apply the entire plan at once. This is also the default behaviour.
+
+terraform plan -target local_file.foo
+terraform plan -target="local_file.foo"
+

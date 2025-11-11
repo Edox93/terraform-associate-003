@@ -1,0 +1,23 @@
+The zipmam function constructs a map from a list of keys and a corresponding list of values.
+
+pineapple           yelow               pineapple=yelow
+oranges       +     orange       --->   oranges=orange
+strawberry          red                 strawberry=red
+
+List ofKeys      List of values
+
+zipmap(["pineapple","oranges","strawberry"], ["yelow","orange","red"])
+
+
+
+terraform console 
+
+zipmap(["pineapple","oranges","strawberry"], ["yelow","orange","red"])
+
+#output
+{
+  "oranges" = "orange"
+  "pineapple" = "yelow"
+  "strawberry" = "red"
+}
+

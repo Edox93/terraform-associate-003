@@ -1,0 +1,8 @@
+We can use the provider block to define various aspects of the provider, like region, credentials and so on.
+
+In terraform project, your code might require a very specific set of versions to run.
+
+Example:
+Terraform Version must be 1.8
+AWS Provider Version must be 5.56
+
