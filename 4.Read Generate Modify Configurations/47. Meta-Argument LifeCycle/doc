@@ -1,0 +1,11 @@
+Arguments by meta-argument
+
+In 
+lifecycle
+you have
+
+create_before_destroy
+prevent_destroy
+ignore_changes  # we didi by practice
+replace_triggered_by
+

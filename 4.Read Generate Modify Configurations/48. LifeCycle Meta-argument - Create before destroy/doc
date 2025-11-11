@@ -1,0 +1,3 @@
+Understanding the Default Behavior
+
+By Default, when Terraform must change a resource argument that cannot be updated in-place due to remote API limitations, Terraform will instead destroy the existing object and then create a new replacement object with the the new configured arguments.

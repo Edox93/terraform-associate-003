@@ -1,0 +1,42 @@
+A resource block declares thaht you weant a particular infrastructure object to exist with the given settings
+
+# How Terraform Applies a Configuration
+Create resource that exist in the Configuration but are not associated with real infrastructure object in the state
+Destroy resources that exist in the state but no longer exist in the configuration
+
+Update in-place resources whose arguments have changed
+
+Destroy and re-create resources whose arguments have changed but which cannot be updated in-place due to remote API limitations.
+
+
+# Understanding the Limitations
+What happens if we want to change the default behavior?
+Example: Some modification happened in Real Infrastructue object that is not part of Terraform but you want to ignore changes during terraform apply.
+
+
+# Solution - Using Meta Arguments
+
+Terraform allwos us to include meta-argument within the resource block which allows some details of this standard resource behavior to be customized on a per-resource basis
+
+You can add lifecycle() block inside of resource block
+
+resource "aws_instance" "myec2" {
+    ami = "ami-0f34c5ae932e6f0e4"
+    instance_type = "t2.micro"
+
+    tags = {
+        Name = "HelloEarth"
+    }
+
+    lifecycle {
+        ignore_changes = [tags]
+    }
+}
+
+# Different Meta-Arguments
+
+depends_on 
+count
+for_each
+lifecycle
+provider
