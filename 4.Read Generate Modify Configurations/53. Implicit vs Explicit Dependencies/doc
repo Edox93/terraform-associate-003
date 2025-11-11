@@ -1,0 +1,40 @@
+# Setting the Base
+
+# There are 2 ways to define dependencies in Terraform
+Imlicit and Explicit
+
+# Explicit dependencies are declared using the depend_on meta-argument
+
+You use this whe there's no direct attribute referece, but you still need to controll the order of resource creation.
+
+resource "aws_instance" "example" {
+    ami = "ami-dfdsfds"
+    instance_type = "t3.micro"
+    depend_on = [aws_s3_bucket.example]
+}
+
+resource "aws_s3_bucket" "example" {
+    bucket = "edox-demo-s3-bucket-007"
+}
+
+#       Sample Requirement
+# EC2 should only allow communication from trusted set of IP addresses
+
+# Resources Need: EC2 + SG
+
+
+# For Explicit YOu should use depends_on like in case of
+
+aws_instance_example
+        |
+    depends_on
+        |
+aws_s3_bucket_example
+
+# For Implicit Dependency
+
+aws_security_group.prod
+        |
+  used in attribute
+        |
+aws_instane-example

@@ -1,0 +1,13 @@
+# Ignore changes
+
+In cases where settins of a remote object is modified by processes outside of Terraform, the Terraform would attempt to "Fix" on the next run.
+
+In order to change this behavior and ignore the manually applied change, we can make use of ignore_chanes argument under lifecycle
+
+# ignore all
+    lifecycle {
+      ignore_changes = all
+    }    
+Instead of list the all may be used to instruc Terraform to ignore all attributtes, which means that Terraform can create and destroy yhe remote object but will never propose update to it    
+
+It will be ignore  key value name of your ec2 if you change in resoure block too

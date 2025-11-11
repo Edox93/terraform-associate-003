@@ -1,0 +1,11 @@
+Prevent Destroy Argument
+
+This meta-Argument, when set to true, will cause Terraform to reject with an error any plat that would destroy the infrastructure object associated with teh resource, as long
+as the argument remains present in the configuration.
+
+# Points to Note
+
+This can be used as a measure of safety against the accidental replacement of objects that may be costly to reproduce, such as database instances.
+
+Since this argument must be present in configuration for the protection to apply, note that this setting does not prevent the remote object from bing destroyed if the resource block were removed from confoguration entirely.
+ 

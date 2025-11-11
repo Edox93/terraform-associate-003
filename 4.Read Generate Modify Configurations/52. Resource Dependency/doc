@@ -1,0 +1,16 @@
+# Sample Requirement
+
+An application deployd on an EC@ must stor its data in external storage vefore can initialize
+
+Reosurce Needed: S3 Buket (for external storage) and EC2 instance
+
+1. step S3
+2. step EC2
+
+In a scenatio there is no guaranted wich one will be created first. For thate we have
+depends_on meta-argument
+
+
+In Destroy case  the order is reversed to ensure dependencies are not broken during deletion
+1. deleting ec2
+2. deleting s3
