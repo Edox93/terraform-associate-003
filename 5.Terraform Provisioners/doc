@@ -1,0 +1,15 @@
+#       Setting the baee
+
+# We have been using Terraform to create and manage resources for a specific provider.
+# Organizations would end-to-end solution for creations for infrastructure and confoguring appropriate packages required of the application
+# Provisioners are used to execute scripts on a local or remote machine as part of resource creation or destruction
+# Example: After Vm is launched, install software package reuired for application
+
+# 2 major Types of Provisioners
+# local-exec remote-exec
+
+# local-exec invokes a local executamle after  resource is created
+# Example fetch IP address and store in ip.txt
+
+# remote-exec provisioners allow to invoke scripts or run commands directly on the remote server
+# Example after EC2 is launched, install nginx

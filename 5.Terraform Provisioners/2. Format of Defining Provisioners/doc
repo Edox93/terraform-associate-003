@@ -1,0 +1,16 @@
+# 1 - Defining Provisioners
+
+# Provisioners are defined inside a specific  resource.
+resource "aws_instance" "myec2" {
+    ami = "ami=fg987df9g7f9g7fd"
+    instance_type = "t2.micro"
+
+    <provisioners-need-to-be-defined-inside-resource>
+    provisioner "local-exec" {
+        command = "echo Server has been created through Terraform"
+    }
+    provisioner "remote-exec" {}
+}
+
+#   Remote exec provisioner approach
+# Sine command are executed on remote-server, we have to provide way for Terraform to connect to remote server.
