@@ -1,0 +1,36 @@
+# revising Map Data Type
+
+variable "my-map" {
+    type = map(number)
+}
+
+output "variable_value" {
+    value = var.my-map
+}
+
+In a basic setup, a map is a collection of key-value pairs. where all values must be of the same type where as keys are string.
+
+Strict structure is not required explicity
+
+#        Introducing Object Data Type
+# An object  is also a collection of key-value pairs, but each value can be of a different type.
+# A proper structure is generally required while defining object data type.
+variable "my-object" {
+  type = object({Name = string, userID = number})
+}
+
+output "variable_value" {
+  value = var.my-object
+}
+
+#       Keep in Mind the Syntax
+# object(..) a collection of named attributes that each have their own type
+# The schema of object types is  {<KEY> = <TYPE>,<KEY> = <TYPE>, ...}  - pair of curly braces containing a comma-separated series of <KEY> = <TYPE> pairs.
+
+# Extra attributes are descarded during type conversion
+
+# type = object({Name = string, userID = number})
+# {"Name"="Zeal", "userID"=1234,"email"="insturctors@gmail.com"}
+# the output will be without email
+
+

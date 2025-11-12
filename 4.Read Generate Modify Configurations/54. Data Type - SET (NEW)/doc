@@ -1,0 +1,35 @@
+Revising List Data Type
+
+Lists are used to store multiple items in a single variable
+
+These items can be dublicates as well.
+
+#   Linst and Index
+# List items are indexed, the first item has index [0], the second item has index [1] etc.
+variable "user_names" {
+    type = list
+    default = ["alice","bob","john"]
+}
+
+# SET data type can only store unique elements.
+variable "my_set" {
+    type = set(string)
+    default = ["alice","bob","john"]
+//    default = ["john","bob","alice"]  # if you change positions of elements in case of set it willnot sho changes
+}
+
+
+# Point to Note
+
+While defining a SET, you need to also define the type of value that is expected
+variable "my-set" {
+    type = set(string)
+}
+
+
+
+# SET is Unordered
+# A set does not store the order of the elements
+# Terraform only tracks the presence of elements, not their order.
+
+
