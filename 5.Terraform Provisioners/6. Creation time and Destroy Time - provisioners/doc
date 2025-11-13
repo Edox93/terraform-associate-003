@@ -1,0 +1,18 @@
+# Basic of Creation time provisioners
+
+By default provisioners run when the resource they are defined within is created.
+
+Creation-time provisioners are only run during creation, not during updating or any other lifecycle
+
+# Destroy time provisioner
+
+Destroy provisioners are run before the resource is destroyed
+Example: nginx will be removed and after instance will be destroyed
+
+# Tainting Resource in creation-time provisioners
+If a creation-time provisioner fails, the resource is marked as tained
+A tainted resource will be planned for destruction an recreation upn the next terraform apply.
+Terraform does this because a failed provisioner can leave a resource in a semi-configured state
+
+
+The state file that has marked the resource as "tainted"  because the provisioner had failed.

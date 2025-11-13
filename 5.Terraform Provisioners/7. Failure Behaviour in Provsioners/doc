@@ -1,0 +1,11 @@
+# Understanding the Challenge
+By default, provisioners that fil will also cause the terraform apply itself to tail.
+
+This will lead to resource being tained and we have to re-create the resource
+
+# Basics of On Failure Setting
+The on_failer setting can be used to change the default behaviour.
+
+Values |
+continue   : Ignore the error and continue with creation pr destruction
+fail       : Raise an error and strop applying (the default behavior). If this is creatiion provisioner, taint the resource.

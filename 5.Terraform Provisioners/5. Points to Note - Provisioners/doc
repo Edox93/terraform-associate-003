@@ -1,0 +1,27 @@
+# Provisioners are defined inside Resource block
+
+It not necessary to define aws_instance Resource block for provisioner to run.
+
+They can be defined inside other resource types as well.
+
+resource "aws_iam_user" "lb" {
+  name = "loadbalancer"
+
+  provisioner "local-exec" {
+    command = "echo local-exec provisioner is starting"
+  }
+}
+
+# U can add multiple provisioners too
+resource "aws_iam_user" "lb" {
+  name = "loadbalancer"
+
+  provisioner "local-exec" {
+    command = "echo local-exec provisioner is starting"
+  }
+
+  provisioner "local-exec" {
+    command = "echo local-exec-2 provisioner is starting"
+  }
+
+}
