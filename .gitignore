@@ -3,6 +3,7 @@
 
 aws.key
 github.token
+*.pem
 
 # .tfstate files
 *.tfstate
