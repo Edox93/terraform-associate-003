@@ -1,0 +1,15 @@
+# Understanding basics
+
+If software engineering, don't repeate yourself (DRY) is a principe of software development aimed at reducing repetition of software patterns.
+
+#  Understanding the challenge
+Let's assume there are 10 teams in your organization using Terraform to create and manage EC2 instances.
+
+# Better Approach
+In this approach, the DevOps Team has defined standart EC2 template in a central location that all can use.
+
+# Intro to T Modules
+Terraform Modules allows us to centralize the resource configs and it makes it easier for multiple projects to re-use the Terraform code for projects.
+
+# Multiple Modules for a single project
+Insead of writing code from scratch, we can use multiple ready-made modules available.

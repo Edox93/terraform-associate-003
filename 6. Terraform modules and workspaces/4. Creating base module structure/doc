@@ -1,0 +1,14 @@
+#       Understanding the Base Structure
+A base "modules" folder.
+A sub-folder containing name for each modules that are available
+
+# What is Inside the Sub-folders
+Each module's sub-folder contains the actual module Terraform ode that other projects can reference from.
+
+# Calling the Module
+Each Team can call various set of modules that are available in the modules folder based on thair requirements
+
+# Our Practical Strcuture
+Our structure will include 2 main folders (modules and teams).
+Modules sub-folder will contain sub-folders of modules that are avilable.
+Teams sub-folder will contain list of teams that we want ro be made avilable.

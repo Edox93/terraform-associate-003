@@ -1,0 +1,33 @@
+# Terraform registry contain multiple modules for a specific infra and maintained by different users
+
+# 1 - Check Total Downloads
+Module Downloads can provide early indication about level of acceptance by users in the Terraform community
+
+# 2 - Check Github Page of Module
+Github page can provide important information releated to the COntributors, Reported Issues and other data.
+
+# 3 - Avoid Modules Writeen by Individual Participant
+Avoid module that are maintained by a singel contributor as regular updates, issues and ither might not always be maintained.
+
+# 4 - Analyze Module Documentation
+Good documentation should include an overview, usage instructions, uput and output variables, and examples.
+
+# 5 - Check Version History of Module
+Look at the version history. Frequent updated and a clear versioning strategy suggest active maintenance.
+
+# 6. - Analyze the code
+Inspect the module's source code on github or another platform. Clean, well-structured code is a good sign.
+
+# 7 - Check the Community Feedback
+The number of stars and forks on Github can indicate popularity and community interest.
+
+# 8 - Modules Maintained by HashiCorp Partner
+Search for modules that are maintained by Hashicorp Partners
+
+#           Important Point of Note
+Avoid directly trying any random Terraform module that is not actively maintained and looks shady (primarily y sole individual contributors)
+
+# Whick Modules do Organizations Use ?
+In most of the scenarios, organizations maintain their own set of modules
+
+They might initially for a module from the Terraform registry and modify it based on thair use case.
