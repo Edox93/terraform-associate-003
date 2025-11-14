@@ -1,0 +1,4 @@
+# Challenge 2 - Provider improvements
+Avoid hard-coding region in Module code as much as possible
+
+A required_provider block with version constraints for module to work is important

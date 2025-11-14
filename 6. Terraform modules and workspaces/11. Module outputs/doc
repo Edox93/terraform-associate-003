@@ -1,0 +1,12 @@
+# Revising Output Values
+
+Output values make information about your infrastructure available on the command line,a can expose information for other Terraform configuration to use.
+
+# Understanding the Challenge
+
+If you want to create a resorce that has a dependency on an infrastructure created through a module, you won't be able to implicity call it without output values.
+
+# Accessing Child Module Outputs
+Ensure to include output values in the module code for better flexibility and integration with other resources and projects.
+
+Format:   module.<module name>.<output name>

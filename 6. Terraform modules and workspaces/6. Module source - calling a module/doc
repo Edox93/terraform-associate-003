@@ -1,0 +1,35 @@
+#       Understandig the Base
+# Module source can be present in wide variety of locations
+
+These includes
+
+1. Github
+2. HTTP URLs
+3. S3 Buckets
+4. Terraform Registry
+5. Local paths
+
+
+# Base - Calling the Module
+
+In order the reference to a module, you need to make use of module block
+The module block must contain source argument thaht contains location to the referenced module
+
+# Examplw 1 -Local Paths
+Local path are used to reference to module that is available in local filesystem
+
+A local path must begin with either ./ or ../ to indicate that a local path
+
+module "ec2" {
+    source = "../modules/ec2"
+}
+
+# Example 2 - Generic Git Repository
+git:: prefix.
+
+module "vpc" {
+    source = "git::https://example.com/vpc.git"
+}
+
+
+# Modules have version

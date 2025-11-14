@@ -1,0 +1,9 @@
+# Challenge 1 -Hardcoded Values
+The valurs are hardcoded as part of the module
+IF developer is calling the modul, he will haev to stick with same values
+Developer will not b able to override the hardcoded values of the module
+
+# Challenge 2 - Provider Improvements
+
+Avoid hard-coding region in the Module code as much as possible
+A required_provider block with version constraints for module to work is important
