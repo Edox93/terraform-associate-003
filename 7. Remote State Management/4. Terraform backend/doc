@@ -1,0 +1,27 @@
+# Base
+Backends primarily determine where Terraform stres its state file
+
+When u not psecify a backend block in our Terraform config, Terraform uses the default local backend thaht stores terraform.tfstate in the same project folder
+
+1. Code be stored in Git
+2. tfstate in centralized Backend
+
+# Terraform supports wide variety of remote backends
+
+consul
+s3
+azurerm
+gcs
+
+# Default config for local state is
+terraform {
+    backend "local" {
+        path = "relative/path/to/terraform.tfstate"
+    }
+}
+
+store this in backend.tf
+
+# Remote backend
+Accessing state in a remote service generally requires some kind of access credentials
+Some backend act like plain "remote disks" for state files; others support state locking funcionality

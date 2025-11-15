@@ -1,0 +1,21 @@
+# Important thaht all of your terraform code is sotred in a Git repo
+All DevopS Team members can hav access
+
+# Benefits
+1. Centrailized acces for all team members
+2. Full version history and change tracking
+3. Code review and approval workflows
+4. Integration with CI/CD for validation and plans
+
+
+# Firt commit files
+.terraform.locl.hcl
+main.tf
+terraform.tfstate
+terraform.tfvars
+variables.tf
+
+# Point to Note - TO be discussed in Next Lectures
+
+terraform.tfstate should NOT be added to your Git repo
+.terraform should NOT be added to your Git repo

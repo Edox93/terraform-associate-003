@@ -1,0 +1,13 @@
+# Base
+NOT modify state file manually
+
+# BUt 
+Terraform state command is used for advanced state management
+
+list:    resources within terraform state file 
+mv:     moves item with terraform state
+push:   manually upload a local state to remote
+pull:   manually download output state from remote state 
+rm:     remote items from the state
+show:   sho the attributes of a single resource in the stat
+replace-provide:    Used to replaca the provide for resource in a Terraform state

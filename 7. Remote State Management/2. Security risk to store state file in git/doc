@@ -1,0 +1,4 @@
+#  Base
+terraform.tfstate can include secrets in plain text (passwords, tokens, etc)
+
+1. r

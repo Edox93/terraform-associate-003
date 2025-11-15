@@ -1,0 +1,5 @@
+# Base
+The S3 backend allows Terraform to store state file in a specific S3 bucket.
+
+# Example config
+Note: Terraform should have required access to the S3 bucket to be able to push and pull state file to/from S3 bucket

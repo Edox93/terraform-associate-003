@@ -1,0 +1,15 @@
+# exclude files from repo
+
+.terraform                  | providers plugins
+terraform.tfvars            | contain sensitive info
+terraform.tfstate           | Avoid these files
+terraform.tfstate.backup    | Avoid these files
+crash.log                   | if terraform crashes, logs stored to a file
+terraform.tfstate.lock.info | terraform creates and deletes this file automat in apply and contain info about state lock
+Saved Plan Files            | Saved plan files that you create when include the -out flag when you run terraform plan
+
+# Allways commit files
+1. ALl Terraform od files
+2. .terraform.lock.hcl dependency lock file
+3. .gitignore
+4. README.md for description
