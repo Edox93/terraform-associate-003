@@ -1,0 +1,24 @@
+# Setting the Base
+An infrustructure created throug Terraform is tied to the underlying Terraform
+configuration and a state file.
+
+#       What if?
+What if we have multiple state file for single Terraform configuration?
+Can we manage diff env's throughe it separately?
+
+# Terraform Wokrspace
+Terraform workspaces enable us to manage multiple set of deployments from the same sets of configuration file.
+
+# terraform workspace list
+# terraform workspace select dev
+# terraform workspace new prd
+
+#  Flexibility with Workspace
+Depending on the workspace being used, the value to a specific argument in your Terraform code can also change
+
+# commands:  
+delete: deleta a workspace
+list: show all worksapces
+new: create a workspace
+select: switch to workspace
+show: current workspace

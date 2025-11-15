@@ -1,0 +1,38 @@
+# Overview
+Anyone can publish and share modules on the Terraform Registry.
+Published modules support versioning, automatically generate documentation, allow browsing version histories, show example and READMEs, and more.
+
+# Requirement for Publishing Module
+
+Github public repo for public registry
+
+Named terraform.<PRIVDER>.<NAME>
+
+Repo description  short description of module
+
+Standard module structure
+
+x.y.z tag for releases sematic version with v :  v1.0.4
+
+
+# tree complete module
+
+README.md
+main.tf
+variables.tf
+outputs.tf
+..
+modules/
+    nestedA /
+        README.md
+        variables.tf
+        main.tf
+        outputs.tf
+    nestedB/
+    .../
+examples/
+    exampleA/
+        main.tf
+    exampleB/
+    .../        
+

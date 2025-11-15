@@ -1,0 +1,13 @@
+# Step 1 - Passing Providers Explicitily
+YOu can ise provider argument ithin a module block to Explicitily define wich provider configuration are available the child module
+
+# Step 2 - Declare COnfiguaration Aliases
+In the child module, you need also delcare the configuration aliases for the provider.
+
+# Step 3 - You can use provider meta-argument within resource to choose appropriate provider configuration
+
+# Point to Node
+The providers argument within a module block is simmilar to the provider argument within a resource, but is a map rather then a single string because a module may contain resources from many different providers.
+
+Provider configuartion (those with the alias argument set) are never inhrited automaticaly by child modules, and so must always be passed explicity using tho providers map
+

@@ -1,0 +1,12 @@
+# Root module
+Root module resides in the main working directory of you Terraform configuration, This is the entry point for your infrastructure definition
+module "ec2" {
+    source = "../../modules/ec2"
+}
+
+# Child Module
+A module that has been called by another module is ofte referred to as a child module.
+resource "aws_instance" "myec2"{
+    ami = var.ami
+    instance_type = var.instance_type
+}

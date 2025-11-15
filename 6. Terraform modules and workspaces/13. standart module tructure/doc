@@ -1,0 +1,22 @@
+# Basic of standard Module Structure
+The standard odule structure is a file and directory layout HashiCorp recommends for reusable modules.
+
+A minimal recommended module following the standard structure is shown below
+
+# tree minimal module 
+1. README.md
+2. main.tf
+3. variables.tf
+4. outputs.tf
+
+# Scope the requirements for Module creation
+A team want to provision their infrastructure using terraform
+The following architecture diagram depicts te desired outcome
+
+# Planning a Module Structure
+In this scenario, a team of Terraform producers, who write terraform code from scratch, will build a collection of modules to provision the infrastructure and applications.
+
+# Final module output
+After reviewing the consumer team's requirement, the producer team has broken up the application infrastructure into the following modules:
+
+network web app db routing securty
