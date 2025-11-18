@@ -1,0 +1,15 @@
+# Alias Meta-Argument
+Each provider can have one default configuration, and any number of alternaet configurations that include an extra name segment (or "alias")
+
+provider "aws" {
+    region = "ap=southeast-1"
+}
+
+provider "aws" {
+    alias = "mumbai"
+    region = "ap=south-1"
+}
+provider "aws" {
+    alias = "usa"
+    region = "us=east-1"
+}
