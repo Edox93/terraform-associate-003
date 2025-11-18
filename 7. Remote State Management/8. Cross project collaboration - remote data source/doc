@@ -1,0 +1,9 @@
+In larger enterprises diff teams and diff asspects infra resource
+
+# For practical
+
+1. create 2 folder for security and networking teams
+2. create eip in networking team an store state file in s3 bucket. Output values should have info of eip.
+
+#
+The terraform_remote_state data source allow us to fetch output values from a specific state backend

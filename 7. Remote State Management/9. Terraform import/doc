@@ -1,0 +1,14 @@
+#  Typical chalenge
+It can happen that all the resources in an organization are created manually
+
+Organizaton wants to start using terraform and manages these resources via terraform
+
+# Older approach for terraform import
+terraform import would crreate the state file ssociated with te resourcs running in your environment.
+And users still had to write the tf fils from scratch
+
+# Current approach for terraform import
+terraform import can automatically create the terraform configuration files for th resources ou want to import
+
+# Point of Note
+Terraform 1.5 introuduces automatic code generation for imported resources.
