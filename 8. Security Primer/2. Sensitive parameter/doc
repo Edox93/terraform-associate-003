@@ -1,0 +1,65 @@
+# Base
+By default Terraform will show the values associated with defined attributes in the CLI output 
+durin plan, apply operation for most of the resources․
+
+# What to expect
+We should design our terraform code in such way that no sensitive information 
+is available and shown out of the box in CLI Output, Logs, etc.
+
+# basic fo Sensitive parameter
+Adding sensitive parameter ensures that you do not accidentally expose this data in CLI Output, log output
+
+# Sensitive Values AND Output Values
+If you try to reference sensitive value in output values, Terraform will immediately giv you an error.
+Example:
+variable "sensitive_content" {
+  sensitive = true
+  default = "f4sdf4ds5passw0rd"
+}
+
+resource "local_file" "foo" {
+  content = var.sensitive_content
+  filename = "password.txt"
+}
+
+output "content" {
+  value =  local_file.foo.content
+}
+Error: Output refers to sensitive value
+
+# Sensitive Values AND Output Values
+If you still want sensitive content to be available in "output" of state file but
+should not be visible in CLI Output, Logs, following approach can be used ad to output sensitive key pair
+output "content" {
+  value =  local_file.foo.content
+  sensitive = "true"
+}
+
+In CLi output will see:
+pass = <sensitive>
+
+# Important
+Sensitive param will NOT protect/redact ifno from State file
+# If you want to protect it in tfstate file too it will be in different video
+
+# Benefits of mature Providers
+Various providers like AWS will automaticall considers the passwor argument for any database as sensitive and will redact it as a sensitive value
+Example in:
+
+resource "aws_db_event_subscription" "default" {
+  allocated_storage = 10
+  db_name = "mydb"
+  engine = "mysql"
+  engine_version = "8.0"
+  instance_class = "db.t3.micro"
+  username = "foo"
+  password = "d65f6sd"
+  parameter_group_name = "default.mysql8.0"
+  skip_final_snapshot = true
+}
+# in terraform plan pass will be sensitive in output
+for username u can do with variable
+variable "db_user" {
+  default = "admin"
+  sensitive = true
+}
