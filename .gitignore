@@ -4,6 +4,7 @@
 aws.key
 github.token
 *.pem
+cli-driven-workspace-token.json
 
 # .tfstate files
 *.tfstate
